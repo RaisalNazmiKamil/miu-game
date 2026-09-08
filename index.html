@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Petualangan Miu, kumpulan empat mini-game browser."><title>Petualangan Miu</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <section id="intro-screen" class="intro-screen"><div class="confetti" aria-hidden="true"></div><div class="intro-miu"><img src="assets/miu.png" alt="Miu si kucing oren"></div><p class="intro-line line-one">Hai Mailan! 👋</p><p class="intro-line line-two">Selamat datang di game Miu! 🐱</p><p class="intro-line line-three">Yuk, bermain bersama Miu!</p><button id="start-adventure" class="start-adventure">MULAI PETUALANGAN →</button></section>
+  <header><a class="logo" href="#" id="logo">🐾 PETUALANGAN <b>MIU</b></a><div class="header-actions"><button id="help-button">? Bantuan</button><button id="sound-button">♫ SUARA: ON</button><button class="danger" id="reset-button">Reset Rekor</button></div></header>
+  <main>
+    <section id="menu-screen" class="screen">
+      <div class="hero"><div><p class="tag">KUMPULAN MINI-GAME ORIGINAL</p><h1>Petualangan<br><span>Miu!</span></h1><p>Empat petualangan seru bersama Miu si kucing oren!</p><p class="controls">Pilih permainan. Kontrol utama: <kbd>A</kbd> <kbd>D</kbd> bergerak, <kbd>W</kbd>/<kbd>SPACE</kbd> lompat.</p></div><div class="miu-portrait"><img src="assets/miu.png" alt="Miu si kucing oren" id="menu-miu"><i>MIU</i></div></div>
+      <section class="game-grid" aria-label="Daftar permainan">
+        <article class="game-card adventure"><span>01</span><h2>Miu Adventure</h2><p>Jelajahi Kebun Awan, kumpulkan ikan, dan kalahkan Si Landak.</p><div><small id="score-adventure">REKOR: 0</small><button data-game="adventure">Mainkan →</button></div></article>
+        <article class="game-card runner"><span>02</span><h2>Miu Endless Run</h2><p>Lari tanpa henti, lompat rintangan, dan kejar rekor terjauh.</p><div><small id="score-runner">REKOR: 0</small><button data-game="runner">Mainkan →</button></div></article>
+        <article class="game-card catchfish"><span>03</span><h2>Miu Catch Fish</h2><p>Tangkap ikan jatuh sebelum waktu habis. Hindari barang bekas!</p><div><small id="score-catchfish">REKOR: 0</small><button data-game="catchfish">Mainkan →</button></div></article>
+        <article class="game-card skyjump"><span>04</span><h2>Miu Sky Jump</h2><p>Melompat makin tinggi dari platform ke platform di langit biru.</p><div><small id="score-skyjump">REKOR: 0</small><button data-game="skyjump">Mainkan →</button></div></article>
+      </section>
+    </section>
+    <section id="game-screen" class="screen"><div class="game-top"><button id="menu-button">← Menu Utama</button><div id="game-title">Miu Adventure</div><button id="pause-button">Ⅱ Jeda</button></div><div class="canvas-wrap"><canvas id="game-canvas" width="960" height="540" aria-label="Area permainan Miu"></canvas><div id="game-overlay" class="overlay" hidden></div></div><p class="game-hint" id="game-hint"></p></section>
+  </main>
+  <dialog id="help-dialog"><button class="close-dialog" aria-label="Tutup bantuan">×</button><h2>Bantuan Miu</h2><p><b>Adventure:</b> A/D atau panah untuk bergerak, W/atas/Spasi lompat, Shift lari, P jeda.</p><p><b>Endless Run:</b> Spasi, W, atau panah atas untuk melompat.</p><p><b>Catch Fish:</b> A/D atau panah kiri/kanan untuk menangkap ikan.</p><p><b>Sky Jump:</b> A/D atau panah kiri/kanan. Miu melompat otomatis saat mendarat.</p><p>Rekor tersimpan di browser perangkat ini.</p></dialog>
+  <script src="games/adventure.js"></script><script src="games/runner.js"></script><script src="games/catchfish.js"></script><script src="games/skyjump.js"></script><script src="main.js"></script>
+</body></html>
