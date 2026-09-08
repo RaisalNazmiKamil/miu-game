@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Petualangan Miu, kumpulan empat mini-game browser."><title>Petualangan Miu</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Petualangan Miu, kumpulan empat mini-game browser."><title>Petualangan Miu</title><link rel="stylesheet" href="style.css"></head>
 <body>
   <section id="intro-screen" class="intro-screen"><div class="confetti" aria-hidden="true"></div><div class="intro-miu"><img src="assets/miu.png" alt="Miu si kucing oren"></div><p class="intro-line line-one">Hai Mailan! 👋</p><p class="intro-line line-two">Selamat datang di game Miu! 🐱</p><p class="intro-line line-three">Yuk, bermain bersama Miu!</p><button id="start-adventure" class="start-adventure">MULAI PETUALANGAN →</button></section>
   <header><a class="logo" href="#" id="logo">🐾 PETUALANGAN <b>MIU</b></a><div class="header-actions"><button id="help-button">? Bantuan</button><button id="sound-button">♫ SUARA: ON</button><button class="danger" id="reset-button">Reset Rekor</button></div></header>
@@ -14,8 +14,22 @@
         <article class="game-card skyjump"><span>04</span><h2>Miu Sky Jump</h2><p>Melompat makin tinggi dari platform ke platform di langit biru.</p><div><small id="score-skyjump">REKOR: 0</small><button data-game="skyjump">Mainkan →</button></div></article>
       </section>
     </section>
-    <section id="game-screen" class="screen"><div class="game-top"><button id="menu-button">← Menu Utama</button><div id="game-title">Miu Adventure</div><button id="pause-button">Ⅱ Jeda</button></div><div class="canvas-wrap"><canvas id="game-canvas" width="960" height="540" aria-label="Area permainan Miu"></canvas><div id="game-overlay" class="overlay" hidden></div></div><p class="game-hint" id="game-hint"></p></section>
+    <section id="game-screen" class="screen">
+      <div class="game-top"><button id="menu-button">← Menu Utama</button><div id="game-title">Miu Adventure</div><button id="pause-button">Ⅱ Jeda</button></div>
+      <div class="canvas-wrap"><canvas id="game-canvas" width="960" height="540" aria-label="Area permainan Miu"></canvas><div id="game-overlay" class="overlay" hidden></div></div>
+      <div id="touch-controls" class="touch-controls" aria-label="Kontrol layar sentuh">
+        <div id="touch-direction" class="touch-group touch-direction">
+          <button type="button" id="touch-left" class="touch-key" aria-label="Bergerak ke kiri">◀</button>
+          <button type="button" id="touch-right" class="touch-key" aria-label="Bergerak ke kanan">▶</button>
+        </div>
+        <div class="touch-group touch-actions">
+          <button type="button" id="touch-run" class="touch-key touch-run" aria-label="Berlari">LARI</button>
+          <button type="button" id="touch-jump" class="touch-key touch-jump" aria-label="Melompat">LOMPAT ▲</button>
+        </div>
+      </div>
+      <p class="game-hint" id="game-hint"></p>
+    </section>
   </main>
-  <dialog id="help-dialog"><button class="close-dialog" aria-label="Tutup bantuan">×</button><h2>Bantuan Miu</h2><p><b>Adventure:</b> A/D atau panah untuk bergerak, W/atas/Spasi lompat, Shift lari, P jeda.</p><p><b>Endless Run:</b> Spasi, W, atau panah atas untuk melompat.</p><p><b>Catch Fish:</b> A/D atau panah kiri/kanan untuk menangkap ikan.</p><p><b>Sky Jump:</b> A/D atau panah kiri/kanan. Miu melompat otomatis saat mendarat.</p><p>Rekor tersimpan di browser perangkat ini.</p></dialog>
+  <dialog id="help-dialog"><button class="close-dialog" aria-label="Tutup bantuan">×</button><h2>Bantuan Miu</h2><p><b>Adventure:</b> Keyboard A/D atau panah untuk bergerak, W/atas/Spasi lompat, Shift lari. Di HP/tablet gunakan tombol ◀ ▶, LARI, dan LOMPAT.</p><p><b>Endless Run:</b> Keyboard Spasi/W/atas, atau tekan tombol LOMPAT. Anda juga bisa mengetuk area permainan untuk melompat.</p><p><b>Catch Fish:</b> Keyboard A/D atau panah kiri/kanan, atau tahan tombol ◀ ▶ di layar.</p><p><b>Sky Jump:</b> Keyboard A/D atau panah kiri/kanan, atau tahan tombol ◀ ▶ di layar. Miu melompat otomatis saat mendarat.</p><p>Rekor tersimpan di browser perangkat ini.</p></dialog>
   <script src="games/adventure.js"></script><script src="games/runner.js"></script><script src="games/catchfish.js"></script><script src="games/skyjump.js"></script><script src="main.js"></script>
 </body></html>

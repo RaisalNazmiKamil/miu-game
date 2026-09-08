@@ -15,9 +15,17 @@ Buka `index.html` langsung di browser modern. Tidak memerlukan server, npm, atau
 
 ## Kontrol
 
+### Laptop/Desktop
 - Adventure: `A/D` atau panah kiri/kanan, `W`/panah atas/Spasi untuk lompat, `Shift` untuk berlari, `P` untuk jeda.
 - Endless Run: Spasi, `W`, atau panah atas untuk lompat.
 - Catch Fish dan Sky Jump: `A/D` atau panah kiri/kanan.
+
+### HP/Tablet
+- Tombol layar sentuh muncul otomatis pada perangkat sentuh atau layar kecil.
+- Adventure: tahan `◀`/`▶` untuk bergerak, `LARI` untuk berlari, dan `LOMPAT` untuk melompat.
+- Endless Run: tekan `LOMPAT` atau ketuk area permainan.
+- Catch Fish dan Sky Jump: tahan `◀`/`▶` untuk bergerak.
+- Tombol sentuh menggunakan Pointer Events sehingga mendukung sentuhan multi-touch, misalnya bergerak sambil melompat.
 
 ## Struktur
 
